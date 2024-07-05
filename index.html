@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatitble" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Encriptador</title>
+</head>
+<body>
+    <div class="contenedor" id="contenedor">
+        <div class="cambioModo">
+                <label class="etiqueta_claro" id="etiqueta_claro">Oscuro</label>
+                <label for="checkboxClase" id="label_change"><i class="fa-solid fa-moon"></i></label>
+                <input type="checkbox" id="checkboxClase" style="display:none";> 
+         </div>
+        <div class="textoUsar">
+            <textarea name="parrafo" class="parrafo" id="parrafo" cols="20" rows="10" placeholder="Ingrese el texto aqui" value="texto" oninput="validarTexto()"></textarea>
+        </div>
+    <div class="limitaciones">
+        <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Solo letras minusculas y sin acentos</p>
+    </div>
+    <div class="botones">
+        <button class="boton_encriptar" type="button"   onclick="encriptar()">Encriptar</button>
+        <button class="boton_desencriptar"  type="button" onclick="desencriptar()">Desencriptar</button>
+        <button class="boton_limpiar" id="boton_limpiar" type="button" onclick="limpiar()">Limpiar</button>
+    </div>
+    <div class="resultado" id="resultado" >
+        <img src="./Imagenes/Muñeco.png" alt="" id="muñeco"/>
+        <div class="resultado_encriptado" id="resultado_encriptado">
+        <h2 id="subtitulo_mensaje">Ningún mensaje fue encontrado</h2>
+        <p id="mensaje_encriptar">Ingresa el texto que deseas encriptar o desencriptar</p>
+       <!-- <textarea name="mensaje" id="mensaje"   cols="20" rows="10" class="mensaje"></textarea>-->
+        </div>
+    </div>
+    <div id="mensaje" class="mensaje">
+        <textarea  name="mensajeRespuesta" class="mensajeRespuesta" cols="20" rows="10" id="mensajeRespuesta" value="texto"></textarea>
+        <button onclick="copiar()">COPIAR</button>
+    </div>
+</div>
+</body>
+<script src="index.js"></script>
+</html>
